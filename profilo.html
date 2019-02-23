@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jQuery -->
+    <script src="Components/jquery/3.3.1/js/jquery.js"></script>
+
+    <!-- Popper -->
+    <script src="Components/popper/js/popper.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Components/bootstrap/4.2/css/bootstrap.css">
+    <script src="Components/bootstrap/4.2/js/bootstrap.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="Components/css/footer.css">
+
+
+    
+    <link rel="stylesheet" type="text/css" href="Components\datatables\css\datatables.css"/>
+ 
+    <script type="text/javascript" src="Components\datatables\js\datatables.js"></script>
+    <script src="Components\DataTables-1.10.18\js\datatableJS.js"></script>
+    
+    <style>
+     .margin{
+        margin: 30px;
+      }
+      .radius{
+        border-radius: 50px;
+      }
+      
+      .tab-content{
+        border: solid 1px #dee2e6;
+        border-top: none 0px #FFF;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      
+      .right{
+        position: absolute; right: 0;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        $('#addressTable').DataTable();
+      });
+    </script>
+    <title>USER</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="mainsite.html">
+        <img src="img/bootstrap-solid.svg" width="30" height="30" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+                <span class="text-uppercase">search</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Desktop</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+                <a class="dropdown-item" href="#">Tablet</a>
+                <!--<div class="dropdown-divider"></div>-->
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iMieiOrdini.html"><span class="text-capitalize">i miei ordini</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profilo.html"><span class="text-capitalize">accedi</span></a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </nav>
+    <!-- end Header -->
+    <!-- content -->
+    <div class="container">
+      <div class="row mx-auto d-block margin"><!-- flex-column flex-sm-row -->
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="nav-item flex-sm-fill">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#page1"><span class="text-capitalize">general data</span></a>
+          </li>
+          <li class="nav-item flex-sm-fill">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#page2"><span class="text-capitalize">password managment</span></a>
+          </li>
+          <li class="nav-item flex-sm-fill">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#page3"><span class="text-capitalize">indirizzi</span></a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent" style="height: 70vh; min-height: 250px;">
+          <div class="tab-pane fade show active" id="page1">
+            <div style="width:80%; transform: translate(0%,50%);" class="mx-auto">
+              <p>
+                <span class="font-weight-bold">Nome:</span>
+                dolor sit amet
+              </p>
+              <p>
+                <span class="font-weight-bold">Cognome:</span>
+                dolor sit amet
+              </p>
+              <p>
+                <span class="font-weight-bold">Descrizione:</span>
+                dolor sit amet, consectetur adipiscing elit. Donec id tellus eu est mattis commodo. Nulla tempor justo nec vehicula malesuada. Fusce id molestie elit, sit amet accumsan risus. Nullaaliquet nisl a enim tristique.
+              </p>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="page2">
+            <div style="width:80%; transform: translate(0%,50%);" class="mx-auto">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Old Password:</span>
+                </div>
+                <input type="text" class="form-control">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">New Password:</span>
+                </div>
+                <input type="text" class="form-control">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Repeat New Password:</span>
+                </div>
+                <input type="text" class="form-control">
+              </div>
+              <button type="button" class="btn btn-primary btn-lg right">SAVE</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="page3"> <!-- https://datatables.net/ -->
+            <table id="addressTable"class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end content -->
+    <!-- Footer -->
+    <footer>
+        <span>Place sticky footer content here.</span>
+    </footer>
+    <!-- end Footer -->
+  </body>
+</html>
