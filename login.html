@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jQuery -->
+    <script src="Components/jquery/3.3.1/js/jquery.js"></script>
+
+    <!-- Popper -->
+    <script src="Components/popper/js/popper.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Components/bootstrap/4.2/css/bootstrap.css">
+    <script src="Components/bootstrap/4.2/js/bootstrap.min.js"></script>
+    
+
+    <link rel="stylesheet" href="Components/css/footer.css">
+    <style>
+     .centered { /*mx-auto d-block is the same*/
+        margin:0 auto;
+      }
+      .padding{
+        padding: 10px;
+      }
+      .loginButton{
+        position: relative;
+        margin: 25px;
+        margin-top: 10px;
+        padding: 25px;
+        
+      }
+    </style>
+    
+    <title>LOGIN</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="login.html">
+        <img src="../../img/bootstrap-solid.svg" width="30" height="30" alt="">
+      </a>
+    </nav>
+    <!-- end Header -->
+    <!-- content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <img src="../../img/300px.png" class="img-fluid mx-auto d-block" alt="Responsive image">
+        </div>
+        <div class="col-md">
+          <div class="container d-flex h-100 padding">
+            <div class="row justify-content-center align-self-center"> <!-- alignment center this div and the exterior one are just container to center vertically items -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Username:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="insert here" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Password:</span>
+                </div>
+                <input type="password" class="form-control" placeholder="insert here" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <a href="mainsite.html" class="btn btn-primary btn-lg mx-auto d-block loginButton">LOGIN</a>
+      </div>
+    </div>
+    <!-- end content -->
+    <!-- Footer -->
+    <footer>
+        <span>Place sticky footer content here.</span>
+    </footer>
+    <!-- end Footer -->
+  </body>
+</html>
